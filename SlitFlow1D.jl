@@ -5,7 +5,7 @@ using Roots
     absG = smooth_abs(G, δ)          # ≈ |G|
     sgnG = G / absG                  # ≈ sign(G), smooth at 0
 
-    μ=500.0
+    μ = 1000.0
 
     Δ0 = smooth_pospart(absG*h - τ0, ϵ)
     ΔS = smooth_pospart(absG*h - τS, ϵ)
