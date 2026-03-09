@@ -21,7 +21,7 @@ The pore space is represented as a graph in which:
 
 The model accounts for:
 
-- Herschel--Bulkley rheology,
+- Herschel-Bulkley rheology,
 - optional wall slip with a finite slip-yield stress,
 - nonlinear coupling of flow rates and pore pressures across the full network.
 
@@ -29,12 +29,12 @@ The model accounts for:
 
 This repository includes tools to:
 
-- generate or import two-dimensional porous-media geometries based on non-overlapping circular obstacles,
+- import two-dimensional porous-media geometries based on non-overlapping circular obstacles,
 - construct the corresponding Voronoi pore network,
 - evaluate the throat-scale pressure-flow relation for Herschel-Bulkley fluids in converging-diverging throats,
 - include optional wall slip,
 - solve the nonlinear pore-network equations for imposed pressure drop or inlet pressure,
-- perform continuation in the imposed pressure to traverse the yielded and near-yield regimes,
+- perform continuation in the imposed pressure to traverse the yielded and near-yield regimes.
 
 ## Requirements
 
