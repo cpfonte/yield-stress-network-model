@@ -58,7 +58,7 @@ If you are using a fresh Julia environment, install them with:
 
 - `main_continuation.jl` — main entry point; defines geometry, rheology, slip, solver settings, pressure sweep, post-processing, and plotting. 
 - `NetworkGeneration.jl` — reads the obstacle coordinates, constructs the Voronoi tessellation and network, and saves network figures. 
-- `Residuals.jl` — defines the nonlinear residuals enforcing mass conservation and the throat pressure--flow relation. 
+- `Residuals.jl` — defines the nonlinear residuals enforcing mass conservation and the throat pressure-flow relation. 
 - `SlitFlow1D.jl` — evaluates the one-dimensional throat model and computes the throat pressure drop by numerical inversion and quadrature. 
 - `sample_porous_medium.csv` — example geometry file containing obstacle-centre coordinates. The example file has two columns, `x0` and `y0`.
 
