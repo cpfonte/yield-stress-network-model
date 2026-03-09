@@ -55,16 +55,7 @@ The scripts import the following Julia packages:
 If you are using a fresh Julia environment, install them with:
 
 ```julia
-using Pkg
-Pkg.add([
-    "NonlinearSolve",
-    "LinearSolve",
-    "CSV",
-    "DataFrames",
-    "CairoMakie",
-    "DelaunayTriangulation",
-    "Roots"
-])
+using Pkg; Pkg.add(["NonlinearSolve", "LinearSolve", "CSV", "DataFrames", "CairoMakie", "DelaunayTriangulation","Roots"])
 
 ## Files
 
