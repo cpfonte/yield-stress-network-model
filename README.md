@@ -54,9 +54,6 @@ The scripts import the following Julia packages:
 
 If you are using a fresh Julia environment, install them with:
 
-```julia
-using Pkg; Pkg.add(["NonlinearSolve", "LinearSolve", "CSV", "DataFrames", "CairoMakie", "DelaunayTriangulation","Roots"])
-
 ## Files
 
 - `main_continuation.jl` — main entry point; defines geometry, rheology, slip, solver settings, pressure sweep, post-processing, and plotting. 
@@ -64,15 +61,6 @@ using Pkg; Pkg.add(["NonlinearSolve", "LinearSolve", "CSV", "DataFrames", "Cairo
 - `Residuals.jl` — defines the nonlinear residuals enforcing mass conservation and the throat pressure--flow relation. :contentReference[oaicite:3]{index=3}
 - `SlitFlow1D.jl` — evaluates the one-dimensional throat model and computes the throat pressure drop by numerical inversion and quadrature. 
 - `sample_porous_medium.csv` — example geometry file containing obstacle-centre coordinates. The example file has two columns, `x0` and `y0`. :contentReference[oaicite:5]{index=5}
-
-## Installation
-
-Clone the repository and instantiate the Julia environment:
-
-```bash
-git clone https://github.com/USERNAME/REPOSITORY_NAME.git
-cd REPOSITORY_NAME
-julia --project=. -e 'using Pkg; Pkg.instantiate()'
 
 ## How to use
 
