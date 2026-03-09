@@ -40,7 +40,39 @@ This repository includes tools to:
 
 The code is written in Julia and was developed using Julia 1.12.5.
 
-Package dependencies are handled through Julia's package manager.
+The scripts import the following Julia packages:
+
+- `NonlinearSolve`
+- `LinearSolve`
+- `LinearAlgebra`
+- `CSV`
+- `DataFrames`
+- `CairoMakie`
+- `Printf`
+- `DelaunayTriangulation`
+- `Roots` 
+
+If you are using a fresh Julia environment, install them with:
+
+```julia
+using Pkg
+Pkg.add([
+    "NonlinearSolve",
+    "LinearSolve",
+    "CSV",
+    "DataFrames",
+    "CairoMakie",
+    "DelaunayTriangulation",
+    "Roots"
+])
+
+## Files
+
+- `main_continuation.jl` — main entry point; defines geometry, rheology, slip, solver settings, pressure sweep, post-processing, and plotting. 
+- `NetworkGeneration.jl` — reads the obstacle coordinates, constructs the Voronoi tessellation and network, and saves network figures. :contentReference[oaicite:2]{index=2}
+- `Residuals.jl` — defines the nonlinear residuals enforcing mass conservation and the throat pressure--flow relation. :contentReference[oaicite:3]{index=3}
+- `SlitFlow1D.jl` — evaluates the one-dimensional throat model and computes the throat pressure drop by numerical inversion and quadrature. 
+- `sample_porous_medium.csv` — example geometry file containing obstacle-centre coordinates. The example file has two columns, `x0` and `y0`. :contentReference[oaicite:5]{index=5}
 
 ## Installation
 
@@ -50,3 +82,19 @@ Clone the repository and instantiate the Julia environment:
 git clone https://github.com/USERNAME/REPOSITORY_NAME.git
 cd REPOSITORY_NAME
 julia --project=. -e 'using Pkg; Pkg.instantiate()'
+
+## How to use
+
+1. Place `main_continuation.jl`, `NetworkGeneration.jl`, `Residuals.jl`, `SlitFlow1D.jl`, and the geometry file in the same directory. The main script sets its working directory to its own location and reads the geometry from the file specified by `net_name` (default: `sample_porous_medium.csv`). 
+
+2. Edit the parameters near the top of `main_continuation.jl` as needed:
+   - geometry: `R`, `L`, `net_name`
+   - rheology: `τ0`, `K`, `n`
+   - slip: `α`, `β`, `τS`
+   - solver tolerances: `abstol`, `reltol`, `maxiters`
+   - pressure sweep: `lo`, `hi`, `N`, `γ` 
+
+3. Run the main script from Julia:
+
+```bash
+julia main_continuation.jl
