@@ -4,7 +4,7 @@ This repository contains the Julia implementation of a calibration-free pore-net
 
 The code was developed for the study reported in:
 
-**Claudio P. Fonte, Elliott Sutton, Kohei Ohei, Eleanor Doman, Yuji Tasaka, and Anne Juel**  
+**Claudio P. Fonte, Elliott Sutton, Kohei Ohie, Eleanor Doman, Yuji Tasaka, and Anne Juel**  
 *Network modelling of yield-stress fluid flow in randomly disordered porous media*  
 Applied Physics Letters, Special Topic: *Non-Newtonian Fluids: From Rheology to Hydrodynamics to Modern Applications*  
 [Add DOI / arXiv / journal link here when available]
