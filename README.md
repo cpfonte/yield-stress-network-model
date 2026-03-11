@@ -7,7 +7,7 @@ The code was developed for the study reported in:
 **Claudio P. Fonte, Elliott Sutton, Kohei Ohie, Eleanor Doman, Yuji Tasaka, and Anne Juel**  
 *Network modelling of yield-stress fluid flow in randomly disordered porous media*  
 Applied Physics Letters, Special Topic: *Non-Newtonian Fluids: From Rheology to Hydrodynamics to Modern Applications*  
-[Add DOI / arXiv / journal link here when available]
+https://doi.org/10.48550/arXiv.2603.09801
 
 The model provides a reduced-order framework for predicting pressure and flow distributions in pore networks constructed from Voronoi tessellations of random circular-obstacle packings, and for analysing yielding, channelisation, and wall-slip effects in viscoplastic porous-media flow.
 
