@@ -52,8 +52,6 @@ The scripts import the following Julia packages:
 - `DelaunayTriangulation`
 - `Roots` 
 
-If you are using a fresh Julia environment, install them with:
-
 ## Files
 
 - `main_continuation.jl` — main entry point; defines geometry, rheology, slip, solver settings, pressure sweep, post-processing, and plotting. 
