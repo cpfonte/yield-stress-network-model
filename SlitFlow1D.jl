@@ -26,7 +26,7 @@ function HBgrad(x, q, hmin, τ0, K, n, α, τS, β, R;
     s = sign(q)
     qabs = abs(q)
 
-    # You integrate x in [0,R], so clamp there defensively
+    # Integration x in [0,R], so clamping here defensively
     x = clamp(x, 0.0, R)
 
     # Geometry with guards
