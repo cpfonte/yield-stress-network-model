@@ -188,7 +188,7 @@ function voronoi_nodes_and_edges(vorn; keep_boundary=false)
         edge_ID = 1:length(v1),
         node_in = v1,
         node_out = v2,
-        hmin = round.(hmin, digits=4),
+        hmin = hmin,
     )
 
     return nodes_df, edges_df
