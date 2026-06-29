@@ -119,7 +119,7 @@ function run_sweep(p_in)
     # Use solution from initial solve as initial guess for the pressure sweep
     z_p = sol.u
     z_pp = sol.u
-    p_p = p_in[2]
+    p_p = p_in[1]
     p_pp = p_in[1]
 
     for i in eachindex(p_in)
@@ -127,7 +127,7 @@ function run_sweep(p_in)
         p  = (p_in[i], p_out, τ0, K, n, α, τS, β, R, idx, edges_df, nodes_df)
 
         # For the first two points, we use the previous solution as the initial guess. After that, we use a linear extrapolation based on the last two solutions to get a better initial guess, which can help convergence especially near the yield point where the solution changes rapidly.
-        if i <= 2
+        if i <= 2 || p_p == p_pp
             z0 = z_p
         else
             z0 = z_p + (z_p .- z_pp) * (p_in[i] - p_p) / (p_p - p_pp)
