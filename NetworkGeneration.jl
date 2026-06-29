@@ -163,7 +163,6 @@ function voronoi_nodes_and_edges(vorn; keep_boundary=false)
         p1 = DT.get_generator(vorn, cell1)
         p2 = DT.get_generator(vorn, cell2)
         delaunay_len = hypot(p1[1] - p2[1], p1[2] - p2[2])
-        hmin = delaunay_len - 2.0*R 
 
         push!(v1s, a); push!(v2s, b)
         push!(c1s, cell1); push!(c2s, cell2)
