@@ -35,7 +35,7 @@ function HBgrad(x, q, hmin, τ0, K, n, α, τS, β, R;
     h = R + hmin_eff - sqrt(rad)
 
     denom2 = max(x*(2R - x), 0.0)
-    hprime = (2.0*(x - R)) / sqrt(denom2 + eps(Float64))
+    hprime = (x - R) / sqrt(denom2 + eps(Float64))
     t = 1.0 / sqrt(hprime^2 + 1.0)
 
     # Solve for G >= 0
