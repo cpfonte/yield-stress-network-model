@@ -81,7 +81,7 @@ function Δp(q, hmin, τ0, K, n, α, τS, β, R; N::Int=51)
     @inbounds for j in 2:(N-1)
         x = (j-1)*h
         fj = HBgrad(x, q, hmin, τ0, K, n, α, τS, β, R)
-        s += (isodd(j) ? 4.0 : 2.0) * fj
+        s += (iseven(j) ? 4.0 : 2.0) * fj
     end
 
     integral_0R = (h/3.0) * s
